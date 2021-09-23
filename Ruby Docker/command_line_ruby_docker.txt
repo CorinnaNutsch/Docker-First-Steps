@@ -1,0 +1,28 @@
+Successfully tagged ruby-test:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+PS C:\Users\corinna.nutsch\Documents\Ruby Docker> docker run --rm ruby-test:latest
+test
+PS C:\Users\corinna.nutsch\Documents\Ruby Docker> docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+PS C:\Users\corinna.nutsch\Documents\Ruby Docker> docker run  ruby-test:latest
+test
+PS C:\Users\corinna.nutsch\Documents\Ruby Docker> docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+PS C:\Users\corinna.nutsch\Documents\Ruby Docker> docker ps -a
+CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS                        PORTS                    NAMES
+a26546f8bc43        ruby-test:latest           "ruby /myapp/test.rb"    12 seconds ago      Exited (0) 11 seconds ago                              objective_khayyam
+2ae2847b6e40        jupyter/minimal-notebook   "tini -g -- start-no…"   11 days ago         Exited (255) 25 minutes ago   0.0.0.0:8888->8888/tcp   stoic_panini
+a6416496a83f        jupyter/minimal-notebook   "tini -g -- start-no…"   11 days ago         Exited (255) 25 minutes ago   8888/tcp                 hardcore_mccarthy
+a9bb5d3f17df        nivedabs/airflow_python    "/entrypoint.sh webs…"   8 months ago        Exited (137) 23 minutes ago                            docker-airflow_webserver_1
+4c72f8617a7c        postgres:9.6               "docker-entrypoint.s…"   8 months ago        Exited (255) 7 months ago     5432/tcp                 docker-airflow_postgres_1
+PS C:\Users\corinna.nutsch\Documents\Ruby Docker> docker rm a26546f8bc43
+a26546f8bc43
+PS C:\Users\corinna.nutsch\Documents\Ruby Docker> docker run --rm ruby-test:latest
+test
+PS C:\Users\corinna.nutsch\Documents\Ruby Docker> docker ps -a
+CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS                        PORTS                    NAMES
+2ae2847b6e40        jupyter/minimal-notebook   "tini -g -- start-no…"   11 days ago         Exited (255) 25 minutes ago   0.0.0.0:8888->8888/tcp   stoic_panini
+a6416496a83f        jupyter/minimal-notebook   "tini -g -- start-no…"   11 days ago         Exited (255) 25 minutes ago   8888/tcp                 hardcore_mccarthy
+a9bb5d3f17df        nivedabs/airflow_python    "/entrypoint.sh webs…"   8 months ago        Exited (137) 24 minutes ago                            docker-airflow_webserver_1
+4c72f8617a7c        postgres:9.6               "docker-entrypoint.s…"   8 months ago        Exited (255) 7 months ago     5432/tcp                 docker-airflow_postgres_1
+PS C:\Users\corinna.nutsch\Documents\Ruby Docker>
